@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Build Your Brand — Mini Game de Brand Awareness</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════ TELA INICIAL ═══ -->
+  <section id="screen-start" class="screen active">
+    <div class="start-inner">
+      <div class="badge">CAPÍTULO 2 · BRAND AWARENESS</div>
+      <h1 class="game-title">Build Your<br /><span class="neon-text">Brand</span></h1>
+      <p class="game-subtitle">
+        Tome decisões estratégicas e descubra onde sua marca se posiciona
+        na <strong>Pirâmide de Brand Awareness</strong>.
+      </p>
+      <div class="meta-info">
+        <span>⬡ 5 perguntas</span>
+        <span>⬡ 2–4 minutos</span>
+        <span>⬡ Score de 0 a 100</span>
+      </div>
+      <button class="btn-primary" id="btn-start">Começar</button>
+    </div>
+    <canvas id="bg-canvas"></canvas>
+  </section>
+
+  <!-- ═════════════════════════════════════════ TELA DE PERGUNTA ═ -->
+  <section id="screen-game" class="screen">
+    <header class="game-header">
+      <span class="header-label">BUILD YOUR BRAND</span>
+      <span class="question-counter" id="question-counter">1 / 5</span>
+    </header>
+
+    <div class="progress-track">
+      <div class="progress-fill" id="progress-fill"></div>
+    </div>
+
+    <div class="question-wrap">
+      <p class="step-tag" id="step-tag">Pergunta 1</p>
+      <h2 class="question-text" id="question-text">Carregando…</h2>
+      <div class="options-grid" id="options-grid">
+        <!-- Opções injetadas via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════ TELA DE RESULTADO ═ -->
+  <section id="screen-result" class="screen">
+    <div class="result-inner">
+      <p class="result-label">Resultado final</p>
+      <h2 class="result-level" id="result-level">Top of Mind</h2>
+      <div class="score-ring">
+        <svg viewBox="0 0 120 120" class="ring-svg">
+          <circle class="ring-bg" cx="60" cy="60" r="50" />
+          <circle class="ring-progress" cx="60" cy="60" r="50" id="ring-progress" />
+        </svg>
+        <div class="ring-label">
+          <span class="score-value" id="score-value">100</span>
+          <span class="score-unit">/ 100</span>
+        </div>
+      </div>
+
+      <!-- Pirâmide de Awareness -->
+      <div class="pyramid-wrap">
+        <div class="pyramid-level" id="pyr-top-of-mind" data-level="top-of-mind">
+          <span>Top of Mind</span>
+        </div>
+        <div class="pyramid-level" id="pyr-recall" data-level="recall">
+          <span>Recall</span>
+        </div>
+        <div class="pyramid-level" id="pyr-recognition" data-level="recognition">
+          <span>Recognition</span>
+        </div>
+        <div class="pyramid-level" id="pyr-no-awareness" data-level="no-awareness">
+          <span>No Awareness</span>
+        </div>
+      </div>
+
+      <div class="feedback-box" id="feedback-box">
+        <!-- Feedback injetado via JS -->
+      </div>
+
+      <div class="result-actions">
+        <button class="btn-primary" id="btn-restart">Jogar novamente</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
