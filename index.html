@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Build Your Brand — Mini Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <main class="app" id="app">
+    <header class="topbar">
+      <p class="eyebrow">Capítulo 2 • Brand Awareness</p>
+      <h1>Build Your Brand</h1>
+      <p class="subtitle">Mini game rápido para testar coerência estratégica de marca.</p>
+    </header>
+
+    <section class="panel panel--start active" id="startScreen" aria-live="polite">
+      <h2>Pronto para construir uma marca memorável?</h2>
+      <p>
+        Em 5 decisões, você vai ver como mensagem, identidade visual, repetição e ponto de contato
+        influenciam o nível de awareness da marca.
+      </p>
+      <button class="btn btn--primary glow" id="startBtn">Começar</button>
+    </section>
+
+    <section class="panel panel--quiz" id="quizScreen" aria-live="polite">
+      <div class="progress-wrap" aria-label="Progresso do jogo">
+        <div class="progress-meta">
+          <span id="progressLabel">Pergunta 1 de 5</span>
+          <span id="progressPercent">20%</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+      </div>
+
+      <article class="question-card" id="questionCard">
+        <h3 id="questionText"></h3>
+        <div class="options" id="optionsContainer"></div>
+      </article>
+
+      <div class="quiz-actions">
+        <button class="btn btn--ghost" id="backBtn" type="button">Voltar</button>
+      </div>
+    </section>
+
+    <section class="panel panel--result" id="resultScreen" aria-live="polite">
+      <h2 id="resultTitle">Sua marca chegou em: Recall</h2>
+      <p class="result-score" id="resultScore">68/100 em Brand Awareness</p>
+
+      <div class="pyramid" aria-label="Pirâmide de Brand Awareness">
+        <div class="pyramid-item" data-level="No Awareness">No Awareness</div>
+        <div class="pyramid-item" data-level="Recognition">Recognition</div>
+        <div class="pyramid-item" data-level="Recall">Recall</div>
+        <div class="pyramid-item" data-level="Top of Mind">Top of Mind</div>
+      </div>
+
+      <p class="feedback" id="resultFeedback"></p>
+
+      <div class="result-actions">
+        <button class="btn btn--primary glow" id="restartBtn">Jogar novamente</button>
+        <a class="btn btn--ghost" id="chapterBtn" href="#" target="_self">Voltar ao capítulo</a>
+        <button class="btn btn--ghost" id="explainBtn">Ver explicação</button>
+      </div>
+
+      <div class="explanation" id="explanationBox" hidden>
+        <h3>Como sua pontuação foi calculada</h3>
+        <ul id="explanationList"></ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
